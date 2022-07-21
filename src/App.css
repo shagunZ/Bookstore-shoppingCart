@@ -1,3 +1,251 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(111,111,111,0.5);
+  z-index: 0.5;  
+  opacity:0.5
+}
+
+.navbar{
+  color: white;
+  background-color: black;
+  display: flex;
+  height: 6em;
+  /* position: fixed; */
+  /* top: 0;
+  width: 100%; */
+}
+.footbar{
+  color: white;
+  background-color: black;
+  display: flex;
+  margin-top: 2em;
+  /* position: fixed;
+  bottom: 0; */
+  width: 100%;
+  
+  }
+ 
+.img{
+  height: 3em;
+  margin-left: 3em;
+  margin-top: 0.3em;
+}
+.navbar ul, .footbar ul{
+  overflow: auto;
+  display: flex;
+  text-decoration: none;
+  padding: 2px;
+}
+.navbar li, .footbar li{
+  /* float: left ; */
+  text-decoration: none;
+  margin: 2px;
+  padding: 5px;
+  list-style: none;
+  /* float:right */
+}
+.navbar li a , .footbar li a{
+  font-family: 'Mulish', sans-serif;
+  color: white;
+  font-weight: bolder;
+  
+  text-decoration: none;
+}
+.navbar li :hover{
+  /* background-color: wheat; */
+  /* border-radius: 20px; */
+  /* padding: 7px; */
+  color: wheat;
+}
+
+.cart:hover{
+  cursor: pointer;
+  color: brown;
+}
+
+.searchlogo{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.searchy {
+  border: 4px solid wheat;
+   margin: 10px;
+   outline: none;
+   }
+
+.rightnav {
+  position: absolute;
+  right: 1em;
+  display: flex;
+}
+
+
+
+
+
+
+
+
+/* /////////////////////card/////////////////// */
+.frow{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  z-index: 0;
+  
+}
+.card{
+ justify-content: center;
+ align-items: center;
+ border: 2px solid black;
+ margin: 1rem;
+ padding: 1em;
+
+}
+
+
+.card-body,p{
+  /* white-space: nowrap; */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+
+
+.btn{
+  border: 3px solid green;
+  border-radius: 12px;
+  padding: 4px;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+.btn:hover{
+   background-color: rgb(7, 104, 7);
+   cursor: pointer;
+ }
+
+
+
+/* cardflip */
+.flip-card {
+  background-color: transparent;
+  width: 18rem;
+  height: 21rem;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: rgb(234, 229, 217);
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: rgb(209, 134, 48);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* //////////////////// */
+
+/* Cart */
+.container{
+  border: 3px solid white;
+  box-shadow: 15px 15px 5px rgb(202 195 183);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  width: 30em;
+  float: right;
+  /* background: linear-gradient(to bottom right, #d38358, #FAFCFF); */
+  /* background: linear-gradient(to bottom right, #94bfb9, #FAFCFF); */
+  position: relative;
+  /* float: right; */
+  right: -200px;
+  top: -10px;
+  z-index: 1;
+  /* visibility: hidden; */
+  /* background-color: #d5be96; */
+  /* background-color: #aeaeb8; */
+  background-color: #e7dcc9;
+}
+
+.row{
+  border-bottom: 3px solid rgb(232, 191, 191);
+  display: flex;
+  margin: 3px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.col-2{
+ margin: 3px;
+ align-items: center;
+ justify-content: center;
+ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ color: #541b00;
+ font-weight: bold;
+}
+
+.heading{
+  margin: 5px;
+  padding: 3px;
+  background-color: #e2bd78;
+  border-radius: 13px;
+}
+.checkoutbtn{
+  margin: 10px;
+  padding: 10px;
+  background-color: #71592d;
+  border: 2px solid #e2bd78;
+  border-radius: 13px;
+  width: 70%;
+  cursor: pointer;
+  font-weight: bolder;
+  color: white;
+}
+/* //////// */
+
 .App {
   text-align: center;
 }
@@ -34,5 +282,28 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+
+
+/* ///////media query */
+@media only screen and (max-width: 833px) and (min-width:313px){
+  
+  .navbar{
+    height: 13em;
+    width: 100%;
+  }
+  
+  .list,ul,.rightnav ,img,.footbar{
+    flex-direction: column;
+  }
+  .searchlogo,.searchy{
+    display: none;
+  }
+  .footlist{
+    margin-top: 6em;
+    
   }
 }
